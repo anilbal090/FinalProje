@@ -34,7 +34,11 @@ public class RESTServisiOrnek {
 		return ogrenciEkle(ogrenciler, ad, soyad);
 	}
 	
-	@RequestMapping(value="/ogrenci/olustur/post",method = RequestMethod.POST)
+	/** http://localhost:8080//ogrenci/olustur/post */
+	@RequestMapping(
+			value="/ogrenci/olustur/post", // hangi uri'den cevap verecegi
+			method = RequestMethod.POST // sadece post istegi
+	)
 	public synchronized Ogrenci ogrenciOlusturPost(String ad, String soyad) {
 		return ogrenciEkle(ogrenciler, ad, soyad);
 	}
